@@ -1,4 +1,5 @@
-<suite name="PodiumTests">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Podium">
     <test thread-count="1" name="PodiumTests">
         <classes>
             <class name="com.podium.web.tests.PodiumLandingPageIT"/>

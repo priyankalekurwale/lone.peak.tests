@@ -1,8 +1,8 @@
 # lone.peak.tests
 This project contains UI Automation tests for https://www.podium.com/ and tests are executed on Google Chrome Browser 
-There are 2 tests files
+
 1. PodiumLandingPageIT : This executes tests on local machine
-2. PodiumLandingPageDockerIT : This executes tests on Docker container
+
 Project is share don Github here : 
 URL : https://github.com/priyankalekurwale/lone.peak.tests
 to Clone : git clone https://github.com/priyankalekurwale/lone.peak.tests.git
@@ -13,6 +13,7 @@ Below apps needs to be installed before executing tests
 1. Java
 2. Maven : M2_HOME set in system path
 3. Chromedriver.exe (Webdriver for chrome) added in system path
+google is in
 # Steps to run tests
 1. Download project from Github 
 2. Navigate to project directory /lone.peak.tests
