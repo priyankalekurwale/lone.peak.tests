@@ -17,6 +17,7 @@ Below apps needs to be installed before executing tests
 1. Java
 2. Maven
 4. Chrome Browser should be installed
+4. Chromedriver.exe should be added in system Path
 # Steps to run tests
 1. Clone project from Github 
 2. Navigate to project directory /lone.peak.tests
