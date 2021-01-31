@@ -35,10 +35,11 @@ Below apps needs to be installed before executing tests
 # Steps to run tests
 1. Clone project from Github 
 2. Navigate to project directory /lone.peak.tests
-3. Execute command to create docker image (Dockerfile is located in lone.peak.tests folder, this command must be run from this folder):-> docker build -t lonepeak .
-4. Validate docker image is created:-> docker images
-5. Start container using the image:-> docker run -d -p 4444:4444 -v /dev/shm:/dev/shm lonepeak:latest
-6. validate container is running:-> docker ps
-3. Execute this command to run tests:-> mvn test 
-5. Test reports directory:-> Project home : lone.peak.tests\target\surefire-reports Open index.html
+3. Change the env in property file /lone.peak.tests/env.properties
+4. Execute command to create docker image (Dockerfile is located in lone.peak.tests folder, this command must be run from this folder):-> docker build -t lonepeak .
+5. Validate docker image is created:-> docker images
+6. Start container using the image:-> docker run -d -p 4444:4444 -v /dev/shm:/dev/shm lonepeak:latest
+7. validate container is running:-> docker ps
+8. Execute this command to run tests:-> mvn test 
+9. Test reports directory:-> Project home : lone.peak.tests\target\surefire-reports Open index.html
 
