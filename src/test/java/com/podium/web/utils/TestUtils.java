@@ -82,7 +82,7 @@ public class TestUtils {
      * @return : initiated driver
      */
     public static WebDriver getLocalWebDriver(WebDriver driver) {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Chromedriver.exe");
         driver = new ChromeDriver();
         // Maximize browser window
         driver.manage().window().maximize();
