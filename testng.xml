@@ -1,0 +1,7 @@
+<suite name="PodiumTests">
+    <test thread-count="1" name="PodiumTests">
+        <classes>
+            <class name="com.podium.web.tests.PodiumLandingPageIT"/>
+        </classes>
+    </test>
+</suite>
