@@ -122,7 +122,10 @@ public class PodiumLandingPage {
      * Clicks on right arrow in video slider
      */
     public void clickRightVideoArrow() {
-        driver.findElement(Using.VIDEO_CONTAINER.selector).findElement(Using.VIDEO_RIGHT_ARROW.selector).click();
+        WebElement rightArrow = driver.findElement(Using.VIDEO_CONTAINER.selector).findElement(Using.VIDEO_RIGHT_ARROW.selector);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(rightArrow));
+        rightArrow.click();
     }
 
     //  Enums definitions for Web elements on web page
