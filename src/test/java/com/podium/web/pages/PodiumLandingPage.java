@@ -104,7 +104,7 @@ public class PodiumLandingPage {
      */
     public void playTraneVideo() {
         driver.findElement(Using.TRANE_VEDEO_PLAY_BUTTON.selector).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(Using.TRANE_VEDEO_CLOSE_BUTTON.selector).click();
     }
 
@@ -121,12 +121,12 @@ public class PodiumLandingPage {
     /**
      * Clicks on right arrow in video slider
      */
-    public void clickRightVideoArrow() {
+    /**public void clickRightVideoArrow() {
         WebElement rightArrow = driver.findElement(Using.VIDEO_CONTAINER.selector).findElement(Using.VIDEO_RIGHT_ARROW.selector);
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(rightArrow));
         rightArrow.click();
-    }
+    }*/
 
     //  Enums definitions for Web elements on web page
     private enum Using {

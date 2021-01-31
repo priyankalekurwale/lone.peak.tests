@@ -74,9 +74,9 @@ public class PodiumLandingPageIT {
     @Test(priority = 4)
     public void validateTestimonialVideos() throws InterruptedException {
         landingPage.playTraneVideo();
-        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
-        landingPage.clickRightVideoArrow();
-        landingPage.playAustinCouchPotatoVideo();
+        //driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        //landingPage.clickRightVideoArrow();
+        //landingPage.playAustinCouchPotatoVideo();
     }
 
     /**
