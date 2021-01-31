@@ -21,6 +21,12 @@ import org.testng.asserts.SoftAssert;
 import com.podium.web.pages.PodiumLandingPage;
 
 public class TestUtils {
+    /**
+     * Validates product menu
+     * @param driver : WebDriver instance
+     * @param landingPage : LandingPage
+     * @param report : to assert
+     */
     public static void validateProductsMenu(WebDriver driver, PodiumLandingPage landingPage, SoftAssert report) {
         Actions builder = new Actions(driver);
         builder.moveToElement(landingPage.getProductsMenu()).build().perform();
@@ -36,6 +42,12 @@ public class TestUtils {
         driver.navigate().back();
     }
 
+    /**
+     * Validates images on landing page
+     * @param driver : WebDriver instance
+     * @param landingPage : LandingPage
+     * @param report : to assert
+     */
     public static void validateImages(WebDriver driver, PodiumLandingPage landingPage, SoftAssert report) {
         List<WebElement> allImages = landingPage.getLandingPageImages();
         for (WebElement img : allImages) {
@@ -49,6 +61,10 @@ public class TestUtils {
         }
     }
 
+    /**
+     * Reads env from property file
+     * @return : env from property file
+     */
     public static String getEnv() {
         Properties prop = new Properties();
         try (InputStream input = new FileInputStream("env.properties")) {
@@ -60,8 +76,13 @@ public class TestUtils {
         return prop.getProperty("runtestenv");
     }
 
+    /**
+     * Gets Chrome driver
+     * @param driver : WebDriver instance
+     * @return : initiated driver
+     */
     public static WebDriver getLocalWebDriver(WebDriver driver) {
-        System.setProperty("webdriver.chrome.driver", "Chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Chromedriver.exe");
         driver = new ChromeDriver();
         // Maximize browser window
         driver.manage().window().maximize();
@@ -70,6 +91,11 @@ public class TestUtils {
         return driver;
     }
 
+    /**
+     * Gets Remote Chrome driver
+     * @param driver : WebDriver instance
+     * @return : initiated Remote driver
+     */
     public static WebDriver getRemoteWebDriver(WebDriver driver) throws MalformedURLException {
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url = new URL("http://localhost:4444/wd/hub");
